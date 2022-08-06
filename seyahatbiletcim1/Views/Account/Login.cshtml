@@ -1,0 +1,66 @@
+﻿@using seyahatbiletcim1.Models
+@model LoginViewModel
+
+
+<h2>@ViewBag.Title</h2>
+
+<!-- Giris Modal  -->
+<div class="modal fade" id="GirisModal" tabindex="-1" role="dialog" aria-labelledby="donateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="donateModalLabel">@Html.Name(seyahatbiletcim1.Resource.HomeText.login)</h4>
+            </div>
+            <div class="modal-body">
+                <h4 class="title text-center">@Html.Name(seyahatbiletcim1.Resource.HomeText.login1)<span class="title-under"></span>  </h4>
+                <section id="loginForm">
+                    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                        @Html.AntiForgeryToken()
+                        <div class="row" style="margin-left:30px">
+
+                            <div class="col-md-2"><label>@Html.Label(seyahatbiletcim1.Resource.HomeText.login2)</label></div>
+                            <div class="form-group">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-left:30px">
+                            <div class="col-md-2"><label>@Html.Label(seyahatbiletcim1.Resource.HomeText.login3)</label></div>
+                            <div class="form-group">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-10">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-offset-2 col-md-10">
+                                <div class="checkbox">
+                                    @Html.CheckBoxFor(m => m.RememberMe)
+                                    @Html.LabelFor(m => m.RememberMe)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <button type="submit" value="Log in" class="btn btn-primary pull-right" name="donateNow">@Html.Name(seyahatbiletcim1.Resource.HomeText.Signin)</button>
+                            </div>
+                        </div>
+                    }
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div> <!-- /.modal -->
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

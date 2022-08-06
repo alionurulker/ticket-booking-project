@@ -1,0 +1,103 @@
+﻿@model PagedList.IPagedList<seyahatbiletcim1.Models.Otobus>
+@using PagedList.Mvc;
+@using PagedList;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+
+<style>
+    h3 {
+        background-image: url('../../assets/images/otobus-bg.jpg');
+        background-repeat: repeat-y;
+    }
+</style>
+
+<h3 style=" min-height: 190px; margin-top: 5px; background-size: cover;">
+    <div class=" text-center">
+
+        <div class="container zoomIn animated ">
+
+            <h1 class="page-title">@Html.Name(seyahatbiletcim1.Resource.HomeText.OtobusBilet) <span class="title-under"></span></h1>
+            <p class="page-description">
+                @Html.Name(seyahatbiletcim1.Resource.HomeText.otobusslider)
+            </p>
+
+        </div>
+
+    </div>
+</h3>
+
+
+
+<h2 class="title-style-2" style="margin-left:120px">@Html.Name(seyahatbiletcim1.Resource.HomeText.OTOBUSSEFER) <span class="title-under"></span></h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.nereden)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.nereye)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.Tarih)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.Otobusfirma)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.BiletFiyati)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.Yolcu)
+        </th>
+    <th></th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nereden)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nereye)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tarih)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KoltukNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FiyatOto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirmaAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YolcuSayisiOto)
+                </td>
+                <td>
+
+                    @Html.ActionLink(seyahatbiletcim1.Resource.HomeText.güncelle, "Edit", new { id = item.OtobusID }) |
+                    @Html.ActionLink(seyahatbiletcim1.Resource.HomeText.detay, "Details", new { id = item.OtobusID }) |
+                    @Html.ActionLink(seyahatbiletcim1.Resource.HomeText.iade, "Delete", new { id = item.OtobusID })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<div align="right" style="margin-right:120px">
+    <font class="btn btn-primary">
+        @Html.ActionLink(seyahatbiletcim1.Resource.HomeText.BiletSatinAl, "Create")
+    </font>
+</div>
+
+<div align="left" style="margin-left:120px">
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+                        new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>

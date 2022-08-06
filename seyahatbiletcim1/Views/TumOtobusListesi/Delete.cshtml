@@ -1,0 +1,72 @@
+﻿@model seyahatbiletcim1.Models.TumOtobusListesi
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TumOtobusListesi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nereden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nereden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nereye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nereye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtobusFirmaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtobusFirmaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FiyatOto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FiyatOto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YolcuKapasitesi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YolcuKapasitesi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

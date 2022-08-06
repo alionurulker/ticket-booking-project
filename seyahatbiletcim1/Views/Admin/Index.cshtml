@@ -1,0 +1,73 @@
+﻿@model PagedList.IPagedList<seyahatbiletcim1.Models.ApplicationUser>
+@using PagedList.Mvc;
+@using PagedList;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<div class="row padleftandright" style="padding:22px" >
+    <div style="width:320px" class="col-md-4">
+        <div class="alert alert-info " style="padding-top:12px">
+            <h3><font face="Lucida Sans Unicode, Lucida Grande">Admin Panel</font></h3>
+            <div class=" alert alert-info" style=" background:#FBFBFB; font-size: 15px; font-family:'Calibri';">
+
+                <ul class="nav nav-pills nav-stacked" style="width:230px">
+                    <li><a href="/TumOtobusListesi/Index">Tüm Otobüs Listesini Görüntüle</a></li>
+                </ul>
+                <ul class="nav nav-pills nav-stacked" style="width:230px">
+                    <li><a href="/TumUcakListesi/Index">Tüm Ucak Listesini Görüntüle</a></li>
+                </ul>
+                <ul class="nav nav-pills nav-stacked" style="width:230px">
+                    <li><a href="/Otel/IndexAdmin">Otelleri Görüntüle</a></li>
+                </ul>
+                <ul class="nav nav-pills nav-stacked" style="width:230px">
+                    <li><a href="/Role/Index">Role Yönetimi</a></li>
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+        <!-- DUYURULAR -->
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Kullanıcılar
+                </h3>
+            </div>
+            <table class="table table-style-2" style="width:300px; margin-top:10px" align="center">
+                <thead>
+                    <tr>
+                        <th>
+                            Email
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+            {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                               
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+            <div align="left" style="margin-left:10px">
+                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+                @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</div>
+

@@ -1,0 +1,71 @@
+﻿@model seyahatbiletcim1.Models.Otobus
+
+
+<br />
+<h1 class="page-title" style="margin-left:270px">Otobüs Bileti Detay</h1><span class="title-under" style="margin-left:250px"></span>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nereden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nereden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nereye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nereye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KoltukNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KoltukNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FiyatOto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FiyatOto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirmaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YolcuSayisiOto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YolcuSayisiOto)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OtobusID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

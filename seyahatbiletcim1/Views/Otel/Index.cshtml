@@ -1,0 +1,94 @@
+﻿@model PagedList.IPagedList<seyahatbiletcim1.Models.Otel>
+@using PagedList.Mvc;
+@using PagedList;
+
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+
+<style>
+    h3 {
+        background-image: url('../../assets/images/otel-bg.jpg');
+        background-repeat: repeat-y;
+    }
+</style>
+
+<h3 style=" min-height: 190px; margin-top: 5px; background-size: cover;">
+    <div class=" text-center">
+
+        <div class="container zoomIn animated ">
+
+            <h1 class="page-title">@Html.Name(seyahatbiletcim1.Resource.HomeText.Konaklama) <span class="title-under"></span></h1>
+            <p class="page-description">
+               @Html.Name(seyahatbiletcim1.Resource.HomeText.reklamotel)
+            </p>
+
+        </div>
+
+    </div>
+</h3>
+
+<h2 class="title-style-2" style="margin-left:120px">@Html.Name(seyahatbiletcim1.Resource.HomeText.KONAKLAMAlist)<span class="title-under"></span></h2>
+<table class="table table-style-2" style="width:1100px;" align="center">
+    <thead>
+        <tr>
+            <th>
+                @Html.Name(seyahatbiletcim1.Resource.HomeText.Nerede)
+            </th>
+            <th>
+                @Html.Name(seyahatbiletcim1.Resource.HomeText.adress)
+            </th>
+            <th>
+                @Html.Name(seyahatbiletcim1.Resource.HomeText.Konuk)
+            </th>
+            <th>
+                @Html.Name(seyahatbiletcim1.Resource.HomeText.YildizSayisi)
+            </th>
+            <th>
+                @Html.Name(seyahatbiletcim1.Resource.HomeText.TesisTipi)
+            </th>
+            <th>
+                @Html.Name(seyahatbiletcim1.Resource.HomeText.GecelikF)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nerede)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UrlAdresi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Konuk)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YildizSayisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TesisTipi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GecelikFiyatAraligi)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.OtelID }) 
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div align="left" style="margin-left:120px">
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("Index",
+                        new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+</div>
+
+
+
+

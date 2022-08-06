@@ -1,0 +1,67 @@
+﻿@model seyahatbiletcim1.Models.Otel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Otel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nerede)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nerede)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UrlAdresi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UrlAdresi)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Konuk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Konuk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YildizSayisi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YildizSayisi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TesisTipi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TesisTipi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GecelikFiyatAraligi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GecelikFiyatAraligi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OtelID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,324 @@
+﻿@model seyahatbiletcim1.Models.Otobus
+
+<style>
+    table {
+        border-collapse: separate;
+        border: solid black 1px;
+        border-radius: 6px;
+        -moz-border-radius: 6px;
+    }
+</style>
+<br />
+<h1 class="page-title" align="center">Otobüs Bileti Düzenle<span class="title-under"></span></h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.OtobusID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nereden, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nereden, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nereden, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nereye, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nereye, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nereye, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Tarih, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Tarih, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.KoltukNo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="container">
+                    <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Koltu Seçin</button><br />&nbsp;
+                    <div id="demo" class="collapse">
+                        @{
+                            List<SelectListItem> listItems = new List<SelectListItem>();
+                            <table>
+                                <tr>
+
+
+                                    @{
+                                        seyahatbiletcim1.DAL.BiletContext db = new seyahatbiletcim1.DAL.BiletContext();
+                                    }
+                                    @{
+
+
+                                        var liste4 = db.Otobuslar1.Where(x => x.KoltukNo == 4);
+                                        if (liste4.Count() == 0)
+                                        {
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "4",
+                                                Value = "4"
+                                            });
+                                            <th><p><span class="label label-info">4</span> </p></th>
+                                        }
+
+                                        foreach (var item in liste4)
+                                        {
+                                            <th><p><span class="label label-danger">4</span> </p></th>
+                                        }
+                                    }
+                                    @{
+                                        var liste8 = db.Otobuslar1.Where(x => x.KoltukNo == 8);
+                                        if (liste8.Count() == 0)
+                                        {
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "8",
+                                                Value = "8"
+                                            });
+                                            <th><p><span class="label label-info">8</span> </p></th>
+                                        }
+                                        foreach (var item in liste8)
+                                        {
+                                            <th><p><span class="label label-danger">8</span> </p></th>
+                                        }
+                                    }
+                                </tr>
+                                <tr>
+                                    @{
+
+
+                                        var liste3 = db.Otobuslar1.Where(x => x.KoltukNo == 3);
+                                        if (liste3.Count() == 0)
+                                        {
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "3",
+                                                Value = "3"
+                                            });
+                                            <th><p><span class="label label-info">3</span> </p></th>
+                                        }
+
+                                        foreach (var item in liste3)
+                                        {
+                                            <th><p><span class="label label-danger">3</span> </p></th>
+                                        }
+                                    }
+                                    @{
+                                        var liste7 = db.Otobuslar1.Where(x => x.KoltukNo == 7);
+                                        if (liste7.Count() == 0)
+                                        {
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "7",
+                                                Value = "7"
+                                            });
+                                            <th><p><span class="label label-info">7</span> </p></th>
+                                        }
+
+                                        foreach (var item in liste7)
+                                        {
+                                            <th><p><span class="label label-danger">7</span> </p></th>
+                                        }
+                                    }
+                                </tr>
+                                <tr>
+                                    <th><p><span>&nbsp;</span> </p></th>
+
+                                </tr>
+                                <tr>
+                                    @{
+
+
+                                        var liste2 = db.Otobuslar1.Where(x => x.KoltukNo == 2);
+                                        if (liste2.Count() == 0)
+                                        {
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "2",
+                                                Value = "2"
+                                            });
+                                            <th><p><span class="label label-info">2</span> </p></th>
+                                        }
+                                        foreach (var item in liste2)
+                                        {
+                                            <th><p><span class="label label-danger">2</span> </p></th>
+                                        }
+                                    }
+                                    @{
+                                        var liste6 = db.Otobuslar1.Where(x => x.KoltukNo == 6);
+                                        if (liste6.Count() == 0)
+                                        {
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "6",
+                                                Value = "6"
+                                            });
+                                            <th><p><span class="label label-info">6</span> </p></th>
+                                        }
+                                        foreach (var item in liste6)
+                                        {
+                                            <th><p><span class="label label-danger">6</span> </p></th>
+                                        }
+                                    }
+                                </tr>
+
+                                <tr>
+                                    @{
+
+
+                                        var liste1 = db.Otobuslar1.Where(x => x.KoltukNo == 1);
+                                        if (liste1.Count() == 0)
+                                        {
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "1",
+                                                Value = "1"
+                                            });
+                                            <th><p><span class="label label-info">1</span> </p></th>
+                                        }
+                                        foreach (var item in liste1)
+                                        {
+                                            <th><p><span class="label label-danger">1</span> </p></th>
+                                        }
+                                    }
+                                    @{
+                                        var liste5 = db.Otobuslar1.Where(x => x.KoltukNo == 5);
+                                        if (liste5.Count() == 0)
+                                        {
+                                            listItems.Add(new SelectListItem
+                                            {
+                                                Text = "5",
+                                                Value = "5"
+                                            });
+                                            <th><p><span class="label label-info">5</span> </p></th>
+                                        }
+                                        foreach (var item in liste5)
+                                        {
+                                            <th><p><span class="label label-danger">5</span> </p></th>
+                                        }
+                                    }
+                                </tr>
+
+                            </table>
+                        }
+
+                        @Html.DropDownListFor(model => model.KoltukNo, listItems, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.KoltukNo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirmaAdi, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    List<SelectListItem> listItemsFirma = new List<SelectListItem>();
+                    <table>
+                        <tr>
+
+
+                            @{
+
+
+                                var SEV = db.Otobuslar1.Where(x => x.FirmaAdi == "SEV");
+                                if (SEV.Count() >= 1)
+                                {
+                                    listItemsFirma.Add(new SelectListItem
+                                    {
+                                        Text = "SEV",
+                                        Value = "SEV"
+                                    });
+                                }
+                                var Metro = db.Otobuslar1.Where(x => x.FirmaAdi == "Metro");
+                                if (Metro.Count() >= 1)
+                                {
+                                    listItemsFirma.Add(new SelectListItem
+                                    {
+                                        Text = "Metro",
+                                        Value = "Metro"
+                                    });
+                                }
+                                var Vib = db.Otobuslar1.Where(x => x.FirmaAdi == "VİB");
+                                if (Vib.Count() >= 1)
+                                {
+                                    listItemsFirma.Add(new SelectListItem
+                                    {
+                                        Text = "VİB",
+                                        Value = "VİB"
+                                    });
+                                }
+                                var efe = db.Otobuslar1.Where(x => x.FirmaAdi == "efe tur");
+                                if (efe.Count() >= 1)
+                                {
+                                    listItemsFirma.Add(new SelectListItem
+                                    {
+                                        Text = "efe tur",
+                                        Value = "efe tur"
+                                    });
+                                }
+                            }
+                        </tr>
+
+                    </table>
+
+                }
+
+                @Html.DropDownListFor(model => model.FirmaAdi, listItemsFirma, "-- Select Status --", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.FirmaAdi, "", new { @class = "text-danger" })
+
+            </div>
+            @Html.ValidationMessageFor(model => model.FirmaAdi, "", new { @class = "text-danger" })
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.YolcuSayisiOto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.YolcuSayisiOto, new { htmlAttributes = new { id = "kutu", onkeyup = "EkranaBas()", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.YolcuSayisiOto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.FiyatOto, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.FiyatOto, htmlAttributes: new { id = "fiyat", @class = "control-label col-md-2" })
+                @Html.ValidationMessageFor(model => model.FiyatOto, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <script type="text/javascript">
+            function EkranaBas() {
+                document.getElementById("fiyat").value = document.getElementById("kutu").value * 50
+            }
+        </script>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+                                        }
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

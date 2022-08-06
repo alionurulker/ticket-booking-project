@@ -1,0 +1,66 @@
+﻿@model seyahatbiletcim1.Models.TumOtobusListesi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TumOtobusListesi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nereden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nereden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nereye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nereye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarih)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtobusFirmaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtobusFirmaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FiyatOto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FiyatOto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YolcuKapasitesi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YolcuKapasitesi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TumOtobuslarID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

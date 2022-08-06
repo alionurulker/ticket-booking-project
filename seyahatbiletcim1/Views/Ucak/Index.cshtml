@@ -1,0 +1,116 @@
+﻿@model PagedList.IPagedList<seyahatbiletcim1.Models.Ucak>
+@using PagedList.Mvc;
+@using PagedList;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+<style>
+    h3 {
+        background-image: url('../../assets/images/ucakbg.png');
+        background-repeat: repeat-y;
+    }
+</style>
+
+<h3 style=" min-height: 190px; margin-top: 5px; background-size: cover;">
+    <div class=" text-center">
+
+        <div class="container zoomIn animated ">
+
+            <h1 class="page-title">@Html.Name(seyahatbiletcim1.Resource.HomeText.UcakBilet) <span class="title-under"></span></h1>
+            <p class="page-description">
+                @Html.Name(seyahatbiletcim1.Resource.HomeText.ucakslider)
+            </p>
+
+        </div>
+
+    </div>
+</h3>
+
+
+
+
+
+<h2 class="title-style-2" style="margin-left:120px"> @Html.Name(seyahatbiletcim1.Resource.HomeText.ucaksefer) <span class="title-under"></span></h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.nereden)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.nereye)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.gidistarih)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.donustarih)
+        </th>
+
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.UcakFirmaAdi)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.Sinif)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.BiletFiyati)
+        </th>
+        <th>
+            @Html.Label(seyahatbiletcim1.Resource.HomeText.Yolcu)
+        </th>
+        <th></th>
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nereden)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nereye)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gtarih)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dtarih)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UcakFirmaAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UFiyat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TekYon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YolcuSayisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sinif)
+                </td>
+                <td>
+                    @Html.ActionLink(seyahatbiletcim1.Resource.HomeText.güncelle, "Edit", new { id = item.UcakID }) |
+                    @Html.ActionLink(seyahatbiletcim1.Resource.HomeText.detay, "Details", new { id = item.UcakID }) |
+                    @Html.ActionLink(seyahatbiletcim1.Resource.HomeText.iade, "Delete", new { id = item.UcakID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+            <div align="right" style="margin-right:120px">
+              <font class="btn btn-primary">
+                @Html.ActionLink(seyahatbiletcim1.Resource.HomeText.BiletSatinAl, "Create")
+              </font>
+            </div>
+
+            <div align="left" style="margin-left:120px">
+                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            
+                @Html.PagedListPager(Model, page => Url.Action("Index",
+                        new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+            </div>
+       

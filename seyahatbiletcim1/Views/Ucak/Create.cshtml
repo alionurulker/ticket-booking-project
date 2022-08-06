@@ -1,0 +1,201 @@
+﻿@model seyahatbiletcim1.Models.Ucak
+
+
+<br />
+<h1 class="page-title" align="center">Ucak Bileti Al<span class="title-under"></span></h1>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nereden, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nereden, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nereden, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nereye, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nereye, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Nereye, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Gtarih, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Gtarih, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Gtarih, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dtarih, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Dtarih, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Dtarih, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.UcakFirmaAdi, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    List<SelectListItem> listItemsFirma = new List<SelectListItem>();
+                    <table>
+                        <tr>
+
+                            @{
+                                seyahatbiletcim1.DAL.BiletContext db = new seyahatbiletcim1.DAL.BiletContext();
+                            }
+                            @{
+
+
+                                var statu1 = db.TumUcakListesi.Where(x => x.UcakFirmaAdi == "Turkish Airlines");
+                                if (statu1.Count() >= 1)
+                                {
+                                    listItemsFirma.Add(new SelectListItem
+                                    {
+                                        Text = "Turkish Airlines",
+                                        Value = "Turkish Airlines"
+                                    });
+                                }
+                                var statu2 = db.TumUcakListesi.Where(x => x.UcakFirmaAdi == "Onur Air");
+                                if (statu2.Count() >= 1)
+                                {
+                                    listItemsFirma.Add(new SelectListItem
+                                    {
+                                        Text = "Onur Air",
+                                        Value = "Onur Air"
+                                    });
+                                }
+                                var statu3 = db.TumUcakListesi.Where(x => x.UcakFirmaAdi == "Pegasus Airlines");
+                                if (statu3.Count() >= 1)
+                                {
+                                    listItemsFirma.Add(new SelectListItem
+                                    {
+                                        Text = "Pegasus Airlines",
+                                        Value = "Pegasus Airlines"
+                                    });
+                                }
+                                var statu4 = db.TumUcakListesi.Where(x => x.UcakFirmaAdi == "Anadolu Jet");
+                                if (statu4.Count() >= 1)
+                                {
+                                    listItemsFirma.Add(new SelectListItem
+                                    {
+                                        Text = "Anadolu Jet",
+                                        Value = "Anadolu Jet"
+                                    });
+                                }
+                            }
+                        </tr>
+
+                    </table>
+
+                }
+
+                @Html.DropDownListFor(model => model.UcakFirmaAdi, listItemsFirma, "-- Select Status --", htmlAttributes: new { @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.UcakFirmaAdi, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TekYon, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.TekYon)
+                    @Html.ValidationMessageFor(model => model.TekYon, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Sinif, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @{
+                    List<SelectListItem> listItemsSinif = new List<SelectListItem>();
+                    <table>
+                        <tr>
+
+                            @{
+
+
+                                var stat1 = db.TumUcakListesi.Where(x => x.Sinif == "Ekonomi");
+                                if (stat1.Count() >= 1)
+                                {
+                                    listItemsSinif.Add(new SelectListItem
+                                    {
+                                        Text = "Ekonomi",
+                                        Value = "Ekonomi"
+                                    });
+                                }
+                                var stat2 = db.TumUcakListesi.Where(x => x.Sinif == "Business");
+                                if (stat2.Count() >= 1)
+                                {
+                                    listItemsSinif.Add(new SelectListItem
+                                    {
+                                        Text = "Business",
+                                        Value = "Business"
+                                    });
+                                }
+                                var stat3 = db.TumUcakListesi.Where(x => x.Sinif == "Compfort");
+                                if (stat3.Count() >= 1)
+                                {
+                                    listItemsSinif.Add(new SelectListItem
+                                    {
+                                        Text = "Compfort",
+                                        Value = "Compfort"
+                                    });
+                                }
+                            }
+                        </tr>
+
+                    </table>
+
+                }
+
+                @Html.DropDownListFor(model => model.Sinif, listItemsSinif, "-- Select Status --", htmlAttributes: new { @class = "form-control" })
+            </div>
+            @Html.ValidationMessageFor(model => model.Sinif, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.YolcuSayisi, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.YolcuSayisi, new { htmlAttributes = new { id = "kutu", onkeyup = "EkranaBas()", @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.YolcuSayisi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.UFiyat, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.UFiyat, htmlAttributes: new { id = "fiyat", @class = "control-label col-md-2" })
+                @Html.ValidationMessageFor(model => model.UFiyat, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+            function EkranaBas() {
+                document.getElementById("fiyat").value = document.getElementById("kutu").value * 300
+            }
+</script>
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

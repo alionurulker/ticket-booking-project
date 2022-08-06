@@ -1,0 +1,88 @@
+﻿@model seyahatbiletcim1.Models.Ucak
+
+
+<br />
+<h1 class="page-title" style="margin-left:270px">Ucak Bileti Detay</h1><span class="title-under" style="margin-left:250px"></span>
+
+    <div>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nereden)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nereden)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Nereye)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nereye)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gtarih)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gtarih)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Dtarih)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Dtarih)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UcakFirmaAdi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UcakFirmaAdi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.UFiyat)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UFiyat)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TekYon)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.TekYon)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.YolcuSayisi)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.YolcuSayisi)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Sinif)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Sinif)
+            </dd>
+
+        </dl>
+    </div>
+
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.UcakID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

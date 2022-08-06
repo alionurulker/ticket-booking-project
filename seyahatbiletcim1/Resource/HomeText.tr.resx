@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ABOUTUS" xml:space="preserve">
+    <value>HAKKIMIZDA</value>
+  </data>
+  <data name="Activities" xml:space="preserve">
+    <value>ETKİNLİKLER</value>
+  </data>
+  <data name="Airplane" xml:space="preserve">
+    <value>UCAK</value>
+  </data>
+  <data name="Bus" xml:space="preserve">
+    <value>OTOBÜS</value>
+  </data>
+  <data name="CONTACT" xml:space="preserve">
+    <value>BIZE ULAŞIN</value>
+  </data>
+  <data name="dahafazlasi" xml:space="preserve">
+    <value>Daha Fazlası</value>
+  </data>
+  <data name="etkinlik" xml:space="preserve">
+    <value>ETKİNLİKLER</value>
+  </data>
+  <data name="etkinlikslider" xml:space="preserve">
+    <value>Seyahatbiletcim.com ile Eylenceli Etkinliklere Katılın!</value>
+  </data>
+  <data name="HELP" xml:space="preserve">
+    <value>7/24 YARDIM</value>
+  </data>
+  <data name="HELP724" xml:space="preserve">
+    <value>7/24 Satış Sonrası Destek Satın aldığınız bileti iptal ettirmek veya değiştirmek istediğinizde, sizin için 7 gün 24 saat hazır olan destek ekibimizi arayın!</value>
+  </data>
+  <data name="Hotel" xml:space="preserve">
+    <value>OTEL</value>
+  </data>
+  <data name="icerik1" xml:space="preserve">
+    <value>Seyahatin en hızlı ve kolay yolu uçmak olduğuna göre; hemen en ucuz uçak biletlerini arayın, fiyatı size en uygun olan bileti rezervasayon yapın ve online satın alın!</value>
+  </data>
+  <data name="icerik11" xml:space="preserve">
+    <value>Uçak Bileti</value>
+  </data>
+  <data name="icerik2" xml:space="preserve">
+    <value>Otobüs Bileti</value>
+  </data>
+  <data name="icerik22" xml:space="preserve">
+    <value>Bir şehirden diğerine gitmek için en uygun seçeneğin otobüsle seyahat olduğunu düşünüyorsanız, en ucuz otobüs biletlerini arayın, biletinizi online satın alın!</value>
+  </data>
+  <data name="icerik3" xml:space="preserve">
+    <value>7/24 DESTEK</value>
+  </data>
+  <data name="icerik33" xml:space="preserve">
+    <value>7/24 biletleme acentemize ulaşabilirsiniz. Metro Turizm müşteri hizmetlerine ulaşabilirsiniz. Ertürk Lines müşteri hizmetlerine ulaşabilirsiniz.</value>
+  </data>
+  <data name="icerik4" xml:space="preserve">
+    <value>ETKİNLİKLER</value>
+  </data>
+  <data name="icerik44" xml:space="preserve">
+    <value>Gezi Turlarına uygun fiyatlar ile katılın! Üniversite gezilerini takip edin! En iyi Work And Travel şirketlerinizi bizimden seçin! Interrail guruplarını bizden araştırın!</value>
+  </data>
+  <data name="iletisim" xml:space="preserve">
+    <value>Sakarya Üniversitesi Bilgisayar Mühendisliği Bölümü</value>
+  </data>
+  <data name="iletisim1" xml:space="preserve">
+    <value>Sakarya Üniversites</value>
+  </data>
+  <data name="iletisim2" xml:space="preserve">
+    <value>SEYAHATBİLETCİM İLETİŞİM</value>
+  </data>
+  <data name="iletisim3" xml:space="preserve">
+    <value>İLETİŞİM FORMU</value>
+  </data>
+  <data name="iletisim4" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="INTERRAILTURKEY" xml:space="preserve">
+    <value>INTERRAIL TÜRKİYE</value>
+  </data>
+  <data name="kayit" xml:space="preserve">
+    <value>Ad</value>
+  </data>
+  <data name="Kayit1" xml:space="preserve">
+    <value>Soyad</value>
+  </data>
+  <data name="Kayit2" xml:space="preserve">
+    <value>E-Posta</value>
+  </data>
+  <data name="Kayit3" xml:space="preserve">
+    <value>Parola</value>
+  </data>
+  <data name="Kayit4" xml:space="preserve">
+    <value>Parola Tekrarı</value>
+  </data>
+  <data name="Kayit5" xml:space="preserve">
+    <value>Seyahatbiletcim Yeni Üyelik Sayfası</value>
+  </data>
+  <data name="Kayit6" xml:space="preserve">
+    <value>Siz de Seyahatbiletcim.com'a katılın!</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>Seyahatbiletcim Giris Sayfası</value>
+  </data>
+  <data name="login1" xml:space="preserve">
+    <value>Seyahatbiletcim.com'a Hoş Geldiniz!</value>
+  </data>
+  <data name="login2" xml:space="preserve">
+    <value>E-Posta</value>
+  </data>
+  <data name="login3" xml:space="preserve">
+    <value>Parola</value>
+  </data>
+  <data name="otelslider" xml:space="preserve">
+    <value>Kalacak yerinizi Seyahatbiletcim.com ile Bulun!</value>
+  </data>
+  <data name="otelslider1" xml:space="preserve">
+    <value>Lüx Otellerin ayrıntılı bilgileri sizin istediğiniz arama koşulları ile karşınızda.</value>
+  </data>
+  <data name="otelslider2" xml:space="preserve">
+    <value>Otel Ara</value>
+  </data>
+  <data name="otobusslider" xml:space="preserve">
+    <value>Türkiye'nin En Fazla Ziyaretcisi olan Otobüs Bileti Sitesi!</value>
+  </data>
+  <data name="otobusslider1" xml:space="preserve">
+    <value>Güvenli Ödeme, ptal Edilen Bilete Kesintisiz İade, Ayda 4 Milyondan Fazla Ziyaretçi, Komisyon Yok, Ücretsiz</value>
+  </data>
+  <data name="otobusslider2" xml:space="preserve">
+    <value>Otobüs Bileti</value>
+  </data>
+  <data name="OURSPONSORS" xml:space="preserve">
+    <value>SPONSORLARIMIZ</value>
+  </data>
+  <data name="Signin" xml:space="preserve">
+    <value>GİRİŞ</value>
+  </data>
+  <data name="Signup" xml:space="preserve">
+    <value>ÜYE OL</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="ucakslider" xml:space="preserve">
+    <value>Ucuz Uçak Bileti Fiyatları Seyahatbiletcim.com'da!</value>
+  </data>
+  <data name="ucakslider1" xml:space="preserve">
+    <value>7/24 Müşteri Hizmetleri, Güvenli Ödeme, 2 Dakikada Biletini Al</value>
+  </data>
+  <data name="ucakslider2" xml:space="preserve">
+    <value>Uçak Bileti</value>
+  </data>
+  <data name="UNIVERSITYTRAVEL" xml:space="preserve">
+    <value>ÜNİVERSİTE SEYAHATİ</value>
+  </data>
+  <data name="WORKANDTRAVE" xml:space="preserve">
+    <value>ÇALIŞ VE GEZ</value>
+  </data>
+  <data name="BiletFiyati" xml:space="preserve">
+    <value>Bilet Fiyatı</value>
+  </data>
+  <data name="GecelikF" xml:space="preserve">
+    <value>Gecelik Fiyat Aralığı</value>
+  </data>
+  <data name="Nerede" xml:space="preserve">
+    <value>Nerede</value>
+  </data>
+  <data name="nereden" xml:space="preserve">
+    <value>Nereden</value>
+  </data>
+  <data name="nereye" xml:space="preserve">
+    <value>Nereye</value>
+  </data>
+  <data name="OTELARAMA" xml:space="preserve">
+    <value>OTEL ARAMA</value>
+  </data>
+  <data name="OTOBUSARAMA" xml:space="preserve">
+    <value>OTOBÜS ARAMA</value>
+  </data>
+  <data name="OtobusBilet" xml:space="preserve">
+    <value>Otobüs Bilet</value>
+  </data>
+  <data name="Sinif" xml:space="preserve">
+    <value>Sinif</value>
+  </data>
+  <data name="Tarih" xml:space="preserve">
+    <value>Tarih</value>
+  </data>
+  <data name="TesisTipi" xml:space="preserve">
+    <value>Tesis Tipi</value>
+  </data>
+  <data name="UCAKARAMA" xml:space="preserve">
+    <value>UÇAK ARAMA</value>
+  </data>
+  <data name="UcakBilet" xml:space="preserve">
+    <value>Uçak Bilet</value>
+  </data>
+  <data name="YildizSayisi" xml:space="preserve">
+    <value>Yıldız Sayısı</value>
+  </data>
+  <data name="Konuk" xml:space="preserve">
+    <value>Konuk</value>
+  </data>
+  <data name="donustarih" xml:space="preserve">
+    <value>Dönüş Tarihi</value>
+  </data>
+  <data name="gidistarih" xml:space="preserve">
+    <value>Gidiş Tarihi</value>
+  </data>
+  <data name="OTOBUSSEFER" xml:space="preserve">
+    <value>OTOBÜS SEFERLERİ</value>
+  </data>
+  <data name="UcakFirmaAdi" xml:space="preserve">
+    <value>Uçak Firma Adı</value>
+  </data>
+  <data name="ucaksefer" xml:space="preserve">
+    <value>UÇAK SEFERLERİ</value>
+  </data>
+  <data name="Yolcu" xml:space="preserve">
+    <value>Yolcu Kapasitesi</value>
+  </data>
+  <data name="Otobusfirma" xml:space="preserve">
+    <value>Otobüs Firma Adı</value>
+  </data>
+  <data name="adress" xml:space="preserve">
+    <value>Url Adresi</value>
+  </data>
+  <data name="BiletSatinAl" xml:space="preserve">
+    <value>Bilet Satın Al</value>
+  </data>
+  <data name="detay" xml:space="preserve">
+    <value>Detaylar</value>
+  </data>
+  <data name="güncelle" xml:space="preserve">
+    <value>Düzenle</value>
+  </data>
+  <data name="iade" xml:space="preserve">
+    <value>İade Et</value>
+  </data>
+  <data name="Konaklama" xml:space="preserve">
+    <value>Konaklama</value>
+  </data>
+  <data name="KONAKLAMAlist" xml:space="preserve">
+    <value>KONAKLAMA LİSTESİ</value>
+  </data>
+  <data name="reklamotel" xml:space="preserve">
+    <value>Seyahatbiletcim.com ile Aradığınız Oteli Hemen Bulun!</value>
+  </data>
+  <data name="uyeistek" xml:space="preserve">
+    <value>You must be a member of our site to benefit from our tickets</value>
+  </data>
+</root>

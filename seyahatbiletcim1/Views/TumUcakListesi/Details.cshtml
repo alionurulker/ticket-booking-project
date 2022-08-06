@@ -1,0 +1,78 @@
+﻿@model seyahatbiletcim1.Models.TumUcakListesi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TumUcakListesi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nereden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nereden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nereye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nereye)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonusTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonusTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GidisTarihi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GidisTarihi)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UcakFirmaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UcakFirmaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FiyatUcak)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FiyatUcak)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sinif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sinif)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.YolcuKapasitesi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YolcuKapasitesi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TumUcaklarID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
