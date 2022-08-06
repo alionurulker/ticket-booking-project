@@ -11,5 +11,5 @@ shorturl.at/klKMQ
 </div>
 
 <div align="center">
-	<img src="https://i.ibb.co/nBKDp4h/2021-12-24-00-15-17.png" alt="whom2yedek" border="0">
+	<img src="https://i.ibb.co/cJV4fNb/2022-08-06-19-55-33.png" alt="whom2yedek" border="0">
 </div>
