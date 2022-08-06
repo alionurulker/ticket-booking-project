@@ -1,6 +1,6 @@
 #  Ticket Booking Project
 
-shorturl.at/klKMQ
+<a href="shorturl.at/klKMQ">Document</a>
 
 <div align="center">
 	<img src="https://i.ibb.co/qxB4hsQ/2021-12-24-00-14-44.png" alt="whom2yedek" border="3">
