@@ -1,6 +1,6 @@
 #  Ticket Booking Project
 
-Proje Dokümantasyon https://yadi.sk/i/EYu24BKQthFtfg
+Proje Dokümantasyon https://github.com/alionurulker/ticket-booking-project/blob/main/TumRapor.docx?raw=true
 
 <div align="center">
 	<img src="https://i.ibb.co/qxB4hsQ/2021-12-24-00-14-44.png" alt="whom2yedek" border="3">
